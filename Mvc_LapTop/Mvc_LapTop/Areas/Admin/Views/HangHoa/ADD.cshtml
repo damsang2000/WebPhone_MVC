@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "ADD";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+<div class="container">
+    <h2 style="text-align: center">THÊM HÀNG HÓA</h2>
+    <table class="table">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <tr>
+                <td style="text-align: center">MÃ HÀNG HÓA</td>
+                <td>
+                    <input class="form-control" name="mahang" />@ViewData["loi1"]</td>
+            </tr>
+            <tr>
+                <td style="text-align: center">TÊN HÀNG HÓA</td>
+                <td>
+                    <input class="form-control" name="tenhang" />@ViewData["loi2"]</td>
+            </tr>
+            <tr>
+                <td style="text-align: center">SỐ LƯỢNG TỒN</td>
+                <td>
+                    <input class="form-control" name="soluongton" />@ViewData["loi3"]</td>
+            </tr>
+            <tr>
+                <td style="text-align: center">MÃ LOẠI HÀNG</td>
+                <td>
+                    <select class="form-control" id="exampleFormControlSelect1" name="maloaihg">
+                        <option>LH01</option>
+                        <option>LH02</option>
+                        <option>LH03</option>
+                        <option>LH04</option>
+                        <option>LH05</option>
+                        <option>LH06</option>
+                        <option>LH07</option>
+                        <option>LH08</option>
+                        <option>LH09</option>
+                        <option>LH010</option>
+                    </select>
+            </tr>
+            <tr>
+                <td style="text-align: center">GIÁ BÁN</td>
+                <td>
+                    <input class="form-control" name="giaban" />@ViewData["loi5"]</td>
+            </tr>
+            <tr>
+                <td style="text-align: center">ẢNH</td>
+                <td>
+                    <input class="form-control" type="file" name="anhbia" /></td>
+            </tr>
+             <tr>
+                <td style="text-align: center">MÔ TẢ</td>
+                <td>
+                    <input class="form-control" name="mota" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input class="btn btn-primary in" type="submit" value="THÊM HÀNG HÓA" style="width: 150px; margin-left: 45%" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <a href="@Url.Action("ShowHangHoa", "HangHoa")" class="btn btn-primary">TRỞ VỀ</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center; color: #eb3b5a">
+                    <p>@ViewBag.TB</p>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

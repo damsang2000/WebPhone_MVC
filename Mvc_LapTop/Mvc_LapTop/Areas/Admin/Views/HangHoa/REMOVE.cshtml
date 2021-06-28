@@ -1,0 +1,43 @@
+﻿@model Mvc_LapTop.Models.HangHoa
+
+@{
+    ViewBag.Title = "REMOVE";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2 style="text-align:center">REMOVE HÀNG HÓA</h2>
+<table class="table table-bordered" style="width:700px;margin-left:15%">
+    <tr>
+        <td style="width:150px">MÃ HÀNG</td>
+        <td>@Html.DisplayFor(model => model.MaHang)</td>
+    </tr>
+    <tr>
+        <td>TÊN HÀNG</td>
+        <td>@Html.DisplayFor(model => model.TenHang)</td>
+    </tr>
+    <tr>
+        <td>MÃ LOẠI HÀNG</td>
+        <td>@Html.DisplayFor(model => model.MaLoaiHang)</td>
+    </tr>
+    <tr>
+        <td>SỐ LƯỢNG TỒN</td>
+        <td>@Html.DisplayFor(model => model.SoLuongTon)</td>
+    </tr>
+    <tr>
+        <td>GIÁ BÁN</td>
+        <td>@Html.DisplayFor(model => model.GiaBan)</td>
+    </tr>
+    <tr>
+        <td>ẢNH BÌA</td>
+        <td><img src="~/Areas/Admin/SanPham/@Html.DisplayFor(model=>model.AnhBia)"  style="width:100px;height:100px"/></td>
+    </tr>
+     <tr>
+        <td>MÔ TẢ</td>
+        <td>@Html.DisplayFor(model => model.MoTa)</td>
+    </tr>
+</table>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" class="btn btn-primary" value="Delete" style="margin-left:45%" />
+    </p>
+}

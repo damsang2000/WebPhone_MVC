@@ -1,0 +1,31 @@
+﻿@model Mvc_LapTop.Models.NhaCungCap
+
+@{
+    ViewBag.Title = "REMOVE";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2 style="text-align:center">REMOVE NHÀ CUNG CẤP</h2>
+<table class="table table-bordered" style="width:500px;margin-left:25%">
+    <tr>
+        <td style="width:230px">MÃ NHÀ CUNG CẤP</td>
+        <td>@Html.DisplayFor(model => model.MaNhaCC)</td>
+    </tr>
+    <tr>
+        <td>TÊN NHÀ CUNG CẤP</td>
+        <td>@Html.DisplayFor(model => model.TenNhaCC)</td>
+    </tr>
+    <tr>
+        <td>ĐỊA CHỈ</td>
+        <td>@Html.DisplayFor(model => model.DiaChi)</td>
+    </tr>
+    <tr>
+        <td>ĐIỆN THOẠI</td>
+        <td>@Html.DisplayFor(model => model.DienThoai)</td>
+    </tr>
+</table>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" class="btn btn-primary" value="Delete" style="margin-left:45%" />
+    </p>
+}

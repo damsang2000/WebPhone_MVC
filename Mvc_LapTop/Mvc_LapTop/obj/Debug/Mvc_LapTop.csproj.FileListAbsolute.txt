@@ -1,0 +1,121 @@
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\Mvc_LapTop.dll
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\Mvc_LapTop.pdb
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\Microsoft.Web.Infrastructure.dll
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\Newtonsoft.Json.dll
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Net.Http.Formatting.dll
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Helpers.dll
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.dll
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.WebHost.dll
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Mvc.dll
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Razor.dll
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Deployment.dll
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.dll
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Razor.dll
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\Newtonsoft.Json.xml
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Net.Http.Formatting.xml
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Helpers.xml
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.xml
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.WebHost.xml
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Mvc.xml
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Razor.xml
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.xml
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Deployment.xml
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Razor.xml
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.csprojResolveAssemblyReference.cache
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.dll
+D:\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.pdb
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.pdb
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\Mvc_LapTop.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\Mvc_LapTop.pdb
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\Newtonsoft.Json.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Net.Http.Formatting.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Helpers.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.WebHost.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Mvc.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Razor.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Razor.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\Newtonsoft.Json.xml
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Net.Http.Formatting.xml
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Helpers.xml
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.xml
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.WebHost.xml
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Mvc.xml
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Razor.xml
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.xml
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Razor.xml
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\EntityFramework.dll
+C:\Users\ASUS\Desktop\BÁO CÁO WEB\Mvc_LapTop\Mvc_LapTop\bin\EntityFramework.xml
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\Mvc_LapTop.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\Mvc_LapTop.pdb
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\EntityFramework.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\Newtonsoft.Json.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Net.Http.Formatting.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Helpers.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.WebHost.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Mvc.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Razor.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Razor.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\EntityFramework.xml
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\Newtonsoft.Json.xml
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Net.Http.Formatting.xml
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Helpers.xml
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.xml
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.WebHost.xml
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Mvc.xml
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Razor.xml
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.xml
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Razor.xml
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.pdb
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\PagedList.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\PagedList.Mvc.dll
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\PagedList.xml
+C:\Users\ASUS\Desktop\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\PagedList.Mvc.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\Mvc_LapTop.dll.config
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\Mvc_LapTop.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\Mvc_LapTop.pdb
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\EntityFramework.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\Microsoft.Web.Infrastructure.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\Newtonsoft.Json.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\PagedList.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\PagedList.Mvc.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Net.Http.Formatting.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Helpers.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.WebHost.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Mvc.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Razor.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Deployment.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Razor.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\EntityFramework.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\PagedList.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\PagedList.Mvc.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\Newtonsoft.Json.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Net.Http.Formatting.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Helpers.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Http.WebHost.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Mvc.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.Razor.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Deployment.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\bin\System.Web.WebPages.Razor.xml
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.csprojAssemblyReference.cache
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.csproj.CoreCompileInputs.cache
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.csproj.CopyComplete
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.dll
+D:\data_mon_2021\Data\CONG_NGHE_WEB\Nhom1_BaoCaoWeb_LapTop\Mvc_LapTop\Mvc_LapTop\obj\Debug\Mvc_LapTop.pdb

@@ -1,0 +1,59 @@
+﻿@model Mvc_LapTop.Models.NhaCungCap
+
+@{
+    ViewBag.Title = "EDIT";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<style>
+    td {
+        width: 50px;
+    }
+</style>
+<h2 style="text-align: center">EDIT HÀNG HÓA</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <table class="table" style="width: 600px; margin-left: 20%">
+        <tr>
+            <td>MÃ NHÀ CUNG CẤP</td>
+            <td>
+                @Html.EditorFor(model => model.MaNhaCC)
+                @Html.ValidationMessageFor(model => model.MaNhaCC)
+            </td>
+        </tr>
+        <tr>
+            <td>TÊN NHÀ CUNG CẤP</td>
+            <td>
+                @Html.EditorFor(model => model.TenNhaCC)
+                @Html.ValidationMessageFor(model => model.TenNhaCC)
+            </td>
+        </tr>
+        <tr>
+            <td>ĐỊA CHỈ</td>
+            <td>
+                @Html.EditorFor(model => model.DiaChi)
+                @Html.ValidationMessageFor(model => model.DiaChi)
+            </td>
+        </tr>
+        <tr>
+            <td>SỐ ĐIỆN THOẠI</td>
+            <td>
+                @Html.EditorFor(model => model.DienThoai)
+                @Html.ValidationMessageFor(model => model.DienThoai)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" type="submit" style="margin-left: 200px">SAVE</button>
+            </td>
+        </tr>
+
+    </table>
+}
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@

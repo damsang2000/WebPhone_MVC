@@ -1,0 +1,85 @@
+﻿@model Mvc_LapTop.Models.NhanVien
+
+@{
+    ViewBag.Title = "EDIT";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<style>
+    td {
+        width: 50px;
+    }
+</style>
+<h2 style="text-align: center">EDIT HÀNG HÓA</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <table class="table" style="width: 600px; margin-left: 20%">
+        <tr>
+            <td>MÃ NHÂN VIÊN</td>
+            <td>
+                @Html.EditorFor(model => model.MaNhanVien)
+                @Html.ValidationMessageFor(model => model.MaNhanVien)
+            </td>
+        </tr>
+        <tr>
+            <td>TÊN NHÂN VIÊN</td>
+            <td>
+                @Html.EditorFor(model => model.TenNhanVien)
+                @Html.ValidationMessageFor(model => model.TenNhanVien)
+            </td>
+        </tr>
+        <tr>
+            <td>GIỚI TÍNH</td>
+            <td>
+                @Html.EditorFor(model => model.GioiTinh)
+                @Html.ValidationMessageFor(model => model.GioiTinh)
+            </td>
+        </tr>
+        <tr>
+            <td>LƯƠNG</td>
+            <td>
+                @Html.EditorFor(model => model.Luong)
+                @Html.ValidationMessageFor(model => model.Luong)
+            </td>
+        </tr>
+        <tr>
+            <td>CHỨC VỤ</td>
+            <td>
+                @Html.EditorFor(model => model.ChucVu)
+                @Html.ValidationMessageFor(model => model.ChucVu)
+            </td>
+        </tr>
+        <tr>
+            <td>ĐỊA CHỈ</td>
+            <td>
+                @Html.EditorFor(model => model.DiaChi)
+                @Html.ValidationMessageFor(model => model.DiaChi)
+            </td>
+        </tr>
+        <tr>
+            <td>SỐ ĐIỆN THOẠI</td>
+            <td>
+              @Html.EditorFor(model => model.SDT)
+            </td>
+        </tr>
+        <tr>
+            <td>NGÀY SINH</td>
+            <td>
+                @Html.EditorFor(model => model.NgaySinh, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.NgaySinh)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" type="submit" style="margin-left: 200px">SAVE</button>
+            </td>
+        </tr>
+    </table>
+}
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@

@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "DatHang";
+    Layout = "~/Views/Shared/LAYOUT_MVC.cshtml";
+}
+
+@using Mvc_LapTop.Models;
+@model List<GioHangMD>
+@ViewBag.Sach
+
+<!--Bootstrap 4-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<br />
+<div class="tb1" style="background-color: #a29bfe">
+    <br />
+    <h2 style="color: white">THÔNG TIN HÀNG HÓA</h2>
+    <table style="margin-right: 50px; width: 100%">
+        <tr style="height: 60px">
+            <th style="width: 30px; font-size: 17px">Mã sản phẩm</th>
+            <th style="width: 30px; font-size: 17px">Tên sản phẩm</th>
+            <th style="width: 30px; font-size: 17px">Ảnh bìa</th>
+            <th style="width: 30px; font-size: 17px">Số lượng</th>
+            <th style="width: 30px; font-size: 17px">Đơn giá</th>
+            <th style="width: 30px; font-size: 17px">Thành tiền</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr style="height: 60px">
+                <td style="width: 30px; font-size: 17px">@item.iMaHang</td>
+                <td style="width: 30px; font-size: 17px">@item.sTenHang</td>
+                <td style="width: 30px; font-size: 17px">
+                    <img src="~/HinhAnhSP/@item.sAnhBia" /></td>
+                @using (Html.BeginForm())
+                {
+                    <td style="width: 30px; font-size: 17px">
+                        <input type="number" min="1" name="txtSoLuong" value="@item.iSoLuong" size="2"/></td>
+                    <td style="width: 30px; font-size: 17px">@String.Format("{0:0;0}", item.dDonGia)</td>
+                    <td style="width: 30px; font-size: 17px">@String.Format("{0:0,0}", item.dThanhTien)</td>
+                }
+            </tr>
+        }
+        <tr style="background-color: lightgreen; height: 60px">
+            <td colspan="3" style="color: blue; font-weight: bold; text-align: right; width: 20px; font-size: 13px">Tổng cộng:</td>
+            <td style="width: 30px; font-size: 17px">@ViewBag.TongSoLuong</td>
+            <td></td>
+            <td style="width: 30px; font-size: 17px">@String.Format("{0:0,0}", ViewBag.TongThanhTien) VNĐ</td>
+        </tr>
+
+    </table>
+</div>
+
+<p colspan="6">@Html.ActionLink("Trở về giỏ hàng", "XemGioHang", "GioHang")</p>
+
+<div class="tb2" style="background-color: #a29bfe">
+    <br />
+    <h2 style="color: white">THÔNG TIN KHÁCH HÀNG</h2>
+    @{
+        KhachHang kh = (KhachHang)Session["taikhoan"];
+    }
+    <table style="width: 100%;">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <tr style="height: 40px">
+                <td style="width: 100px; font-size: 25px">Họ tên khách hàng</td>
+                <td style="width: 100px; font-size: 25px">@kh.TenKhachHang</td>
+            </tr>
+            <tr style="height: 40px">
+                <td style="width: 100px; font-size: 25px">Địa chỉ</td>
+                <td style="width: 100px; font-size: 25px">@kh.DiaChi</td>
+            </tr>
+            <tr style="height: 40px">
+                <td style="width: 100px; font-size: 25px">Điện thoại</td>
+                <td style="width: 100px; font-size: 25px">@kh.SDT</td>
+            </tr>
+            <tr style="height: 40px">
+                <td style="width: 100px; font-size: 25px">Ngày đặt</td>
+                <td style="width: 100px; font-size: 25px">@DateTime.Now.ToShortDateString()</td>
+            </tr>
+            <tr style="height: 40px">
+                <td style="width: 100px; font-size: 25px">Ngày giao hàng</td>
+                <td style="width: 100px; font-size: 25px">
+                    <input type="date" name="Ngaygiao" /></td>
+            </tr>
+            <tr style="height: 70px; background-color: #4cd137">
+                <td style="width: 100px; font-size: 25px" colspan="2">
+                    <input class="btn btn-primary" type="submit" value="Đồng ý đặt hàng" style="margin-top: 20px;" />
+                </td>
+            </tr>
+        }
+    </table>
+    <br />
+    <br />
+</div>
+

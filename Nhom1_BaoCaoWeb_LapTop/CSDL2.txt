@@ -1,0 +1,347 @@
+CREATE DATABASE QL_LAPTOP
+USE QL_LapTop
+GO
+CREATE TABLE KhachHang
+(
+	MaKhachHang nchar(30) not null,
+	TenKhachHang nvarchar(50),
+	NgaySinh date,
+	GioiTinh nvarchar(3),
+	SDT int,
+	TaiKhoan nvarchar(50),
+	MatKhau nvarchar(100),
+	Email nvarchar(50),
+	DiaChi nvarchar(50),
+	CONSTRAINT PK_KH PRIMARY KEY (MaKhachHang)
+);
+
+CREATE TABLE NhanVien
+(
+	MaNhanVien nchar(30) not null,
+	TenNhanVien nvarchar(50),
+	GioiTinh nvarchar(5),
+    Luong int,
+    ChucVu nvarchar(50),
+	DiaChi nvarchar(50),
+	SDT int,
+	NgaySinh date,
+	CONSTRAINT PK_NV PRIMARY KEY (MaNhanVien)
+ );
+
+CREATE TABLE NhaCungCap
+(
+	MaNhaCC nchar(30) not null, 
+	TenNhaCC nvarchar(50), 
+	DiaChi nvarchar(100), 
+	DienThoai int,
+	CONSTRAINT PK_NCC PRIMARY KEY (MaNhaCC)
+);
+
+CREATE TABLE TrungTamBaoHanh
+(
+	MaTTBaoHanh nchar(30) not null, 
+	DiaChi nvarchar(50),  
+	DienThoai int,
+	CONSTRAINT PK_TTBH PRIMARY KEY (MaTTBaoHanh)
+);
+
+CREATE TABLE LoaiHang
+(
+	MaLoaiHang nchar(30) not null, 
+	TenLoaiHang nvarchar(50),
+	MaNhaCC nchar(30) not null,
+	MaTTBaoHanh nchar(30) not null,
+	CONSTRAINT PK_LH PRIMARY KEY (MaLoaiHang),
+	CONSTRAINT FK_LH_NCC FOREIGN KEY (MaNhaCC) REFERENCES NhaCungCap(MaNhaCC),
+	CONSTRAINT FK_LH_TTBH FOREIGN KEY (MaTTBaoHanh) REFERENCES TrungTamBaoHanh(MaTTBaoHanh)
+);
+
+CREATE TABLE HangHoa
+(
+	MaHang nchar(30) not null, 
+	TenHang nvarchar(50), 
+	MaLoaiHang nchar(30) not null,    
+	SoLuongTon int, 
+	GiaBan int,
+	AnhBia nvarchar(100),
+	MoTa nvarchar(1000),
+	CONSTRAINT PK_HH PRIMARY KEY (MaHang),
+	CONSTRAINT FK_HH_LH FOREIGN KEY (MaLoaiHang) REFERENCES LoaiHang(MaLoaiHang)
+);  
+
+CREATE TABLE HoaDonBan
+(
+	MaHDBan nchar(30) not null,
+	MaKhachHang nchar(30) not null,
+	NgayDat date,
+	NgayGiao date,
+	DaThanhToan nvarchar(30),
+	TinhTrang nvarchar(30),
+	CONSTRAINT PK_HDB PRIMARY KEY (MaHDBan),
+	CONSTRAINT FK_HDB_KH FOREIGN KEY (MaKhachHang) REFERENCES KhachHang(MaKhachHang)
+);
+
+CREATE TABLE ChiTietHDBan
+(
+	MaHDBan nchar(30) not null,
+	MaHang nchar(30) not null,
+	SLBan int,
+	GiaBan int, 
+	MaNhanVien nchar(30) not null,
+	CONSTRAINT FK_CTHDB_HH FOREIGN KEY (MaHang) REFERENCES HangHoa(MaHang),
+	CONSTRAINT FK_CTHDB_NV FOREIGN KEY (MaNhanVien) REFERENCES NhanVien(MaNhanVien)
+);
+
+-----------------------------------------------------------------------------------------------
+-------------------------------------- NHẬP LIỆU ----------------------------------------------
+--Bảng Khách hàng
+INSERT INTO KhachHang(MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, SDT, TaiKhoan, MatKhau, Email, DiaChi) VALUES ('KH01',N'Nguyễn Thị Mai','02/08/2000',  N'NỮ',    0934324212,'hnam1', '123','Tahmao1.h@gmail.com', N'Tân Phú,  HCM');  
+INSERT INTO KhachHang(MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, SDT, TaiKhoan, MatKhau, Email, DiaChi) VALUES ('KH02',N'Trần Văn Cảnh','02/08/2000' ,  N'NAM',   0934868212,'hnam2', '123','Tahmao2.h@gmail.com', N'Tân Bình, HCM');
+INSERT INTO KhachHang(MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, SDT, TaiKhoan, MatKhau, Email, DiaChi) VALUES ('KH03',N'Hoàng Thị An', '02/08/2000' ,  N'NAM',   0950524212,'hnam3', '123','Tahmao3.h@gmail.com', N'Bình Tân, HCM');
+INSERT INTO KhachHang(MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, SDT, TaiKhoan, MatKhau, Email, DiaChi) VALUES ('KH04',N'Trần Văn Lãm',  '02/08/2000',  N'NAM',   0934327622,'hnam4', '123','Tahmao4.h@gmail.com', N'Tân Bình, HCM');
+INSERT INTO KhachHang(MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, SDT, TaiKhoan, MatKhau, Email, DiaChi) VALUES ('KH05',N'Nguyễn Thị Kiều','02/08/2000', N'NỮ',    0934886212,'hnam5', '123','Tahmao5.h@gmail.com', N'Tân Phú,  HCM');
+INSERT INTO KhachHang(MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, SDT, TaiKhoan, MatKhau, Email, DiaChi) VALUES ('KH06',N'Trần Ngọc Ngân', '02/08/2000', N'NỮ',    0934324115,'hnam6', '123','Tahmao6.h@gmail.com', N'Tân Bình, HCM');
+INSERT INTO KhachHang(MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, SDT, TaiKhoan, MatKhau, Email, DiaChi) VALUES ('KH07',N'Nguyễn Huy Hoàng','02/08/2000',N'NAM',   0934324990,'hnam7', '123','Tahmao7.h@gmail.com', N'Tân Phú,  HCM');
+INSERT INTO KhachHang(MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, SDT, TaiKhoan, MatKhau, Email, DiaChi) VALUES ('KH08',N'Trần Văn Trị',  '02/08/2000',  N'NAM',   0934334998,'hnam8', '123','Tahmao8.h@gmail.com', N'Tân Bình, HCM');
+INSERT INTO KhachHang(MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, SDT, TaiKhoan, MatKhau, Email, DiaChi) VALUES ('KH09',N'Phan Đình Phùng','02/08/2000', N'NAM',   0934874212,'hnam9', '123','Tahmao9.h@gmail.com', N'Tân Phú,  HCM');
+INSERT INTO KhachHang(MaKhachHang, TenKhachHang, NgaySinh, GioiTinh, SDT, TaiKhoan, MatKhau, Email, DiaChi) VALUES ('KH10',N'Phạm Gia Hân', '02/08/2000',   N'NỮ',    0977014212,'hnam10','123','Tahmao10.h@gmail.com',N'Tân Bình, HCM');
+SELECT *FROM KhachHang;
+
+--Bảng nhân viên
+set DATEFORMAT dmy;
+  
+INSERT INTO NhanVien (MaNhanVien, TenNhanVien, GioiTinh, Luong, ChucVu, DiaChi, SDT, NgaySinh)  VALUES ('NV01',N'Nguyễn Hoàng Anh Thư',N'Nữ',5500000,N'Nhân viên',N'Tân Phú, TPHCM',0927352718,'12-09-1998');
+INSERT INTO NhanVien (MaNhanVien, TenNhanVien, GioiTinh, Luong, ChucVu, DiaChi, SDT, NgaySinh)  VALUES ('NV02',N'Nguyễn Hoàng Nam',N'Nam',1500000,N'Quản lý',N'Tân Bình, TPHCM',0927352718,'19-12-1997');
+INSERT INTO NhanVien (MaNhanVien, TenNhanVien, GioiTinh, Luong, ChucVu, DiaChi, SDT, NgaySinh)  VALUES ('NV03',N'Lê Ngọc Mai',N'Nữ',7500000,N'Nhân viên',N'Thủ Đức, TPHCM',0927352718,'22-08-1997');
+INSERT INTO NhanVien (MaNhanVien, TenNhanVien, GioiTinh, Luong, ChucVu, DiaChi, SDT, NgaySinh)  VALUES ('NV04',N'Hoàng Thùy Dung',N'Nữ',8500000,N'Nhân viên',N'Bình Chánh, TPHCM',0927352718,'25-06-2000');
+INSERT INTO NhanVien (MaNhanVien, TenNhanVien, GioiTinh, Luong, ChucVu, DiaChi, SDT, NgaySinh)  VALUES ('NV05',N'Trần Hùng Hưng',N'Nam',9000000,N'Nhân viên',N'Quận 1, TPHCM',0927352718,'12-06-1997');
+INSERT INTO NhanVien (MaNhanVien, TenNhanVien, GioiTinh, Luong, ChucVu, DiaChi, SDT, NgaySinh)  VALUES ('NV06',N'Nguyễn Hoàng Anh Ngọc',N'Nữ',7500000,N'Nhân viên',N'Tân Bình, TPHCM',0927352718,'29-07-1999');
+INSERT INTO NhanVien (MaNhanVien, TenNhanVien, GioiTinh, Luong, ChucVu, DiaChi, SDT, NgaySinh)  VALUES ('NV07',N'Nguyễn An Tính',N'Nam',6500000,N'Nhân viên',N'Phú Nhu?n, TPHCM',0927352718,'28-12-1996');
+INSERT INTO NhanVien (MaNhanVien, TenNhanVien, GioiTinh, Luong, ChucVu, DiaChi, SDT, NgaySinh)  VALUES ('NV08',N'Lê Thị Hoàng Anh',N'Nữ',5500000,N'Nhân viên',N'Thủ Đức, TPHCM',0927352718,'22-10-1999');
+INSERT INTO NhanVien (MaNhanVien, TenNhanVien, GioiTinh, Luong, ChucVu, DiaChi, SDT, NgaySinh)  VALUES ('NV09',N'Hoàng Mai Anh',N'Nữ',7000000,N'Nhân viên',N'Bình Chánh, TPHCM',0927352718,'27-02-2001');
+INSERT INTO NhanVien (MaNhanVien, TenNhanVien, GioiTinh, Luong, ChucVu, DiaChi, SDT, NgaySinh)  VALUES ('NV10',N'Trần Thanh Dũng',N'Nam',6500000,N'Nhân viên',N'Quận 1, TPHCM',0927352718,'12-05-1996');
+SELECT *FROM NhanVien;
+
+INSERT INTO NhaCungCap(MaNhaCC, TenNhaCC, DiaChi, DienThoai) values('CC01', N'HNam', N'HCM', 0867234765)
+INSERT INTO NhaCungCap(MaNhaCC, TenNhaCC, DiaChi, DienThoai) values('CC02', N'HNam', N'HCM', 0867234765)
+INSERT INTO NhaCungCap(MaNhaCC, TenNhaCC, DiaChi, DienThoai) values('CC03', N'HNam', N'HCM', 0867234765)
+INSERT INTO NhaCungCap(MaNhaCC, TenNhaCC, DiaChi, DienThoai) values('CC04', N'HNam', N'HCM', 0867234765)
+INSERT INTO NhaCungCap(MaNhaCC, TenNhaCC, DiaChi, DienThoai) values('CC05', N'HNam', N'HCM', 0867234765)
+INSERT INTO NhaCungCap(MaNhaCC, TenNhaCC, DiaChi, DienThoai) values('CC06', N'HNam', N'HCM', 0867234765)
+INSERT INTO NhaCungCap(MaNhaCC, TenNhaCC, DiaChi, DienThoai) values('CC07', N'HNam', N'HCM', 0867234765)
+INSERT INTO NhaCungCap(MaNhaCC, TenNhaCC, DiaChi, DienThoai) values('CC08', N'HNam', N'HCM', 0867234765)
+INSERT INTO NhaCungCap(MaNhaCC, TenNhaCC, DiaChi, DienThoai) values('CC09', N'HNam', N'HCM', 0867234765)
+INSERT INTO NhaCungCap(MaNhaCC, TenNhaCC, DiaChi, DienThoai) values('CC10', N'HNam', N'HCM', 0867234765)
+SELECT *FROM NhaCungCap
+
+INSERT INTO TrungTamBaoHanh(MaTTBaoHanh, DiaChi,  DienThoai) values('BH01', N'HaNoi', 0876123998)
+INSERT INTO TrungTamBaoHanh(MaTTBaoHanh, DiaChi,  DienThoai) values('BH02', N'HaNoi', 0876123998)
+INSERT INTO TrungTamBaoHanh(MaTTBaoHanh, DiaChi,  DienThoai) values('BH03', N'HaNoi', 0876123998)
+INSERT INTO TrungTamBaoHanh(MaTTBaoHanh, DiaChi,  DienThoai) values('BH04', N'HaNoi', 0876123998)
+INSERT INTO TrungTamBaoHanh(MaTTBaoHanh, DiaChi,  DienThoai) values('BH05', N'HaNoi', 0876123998)
+INSERT INTO TrungTamBaoHanh(MaTTBaoHanh, DiaChi,  DienThoai) values('BH06', N'HaNoi', 0876123998)
+INSERT INTO TrungTamBaoHanh(MaTTBaoHanh, DiaChi,  DienThoai) values('BH07', N'HaNoi', 0876123998)
+INSERT INTO TrungTamBaoHanh(MaTTBaoHanh, DiaChi,  DienThoai) values('BH08', N'HaNoi', 0876123998)
+INSERT INTO TrungTamBaoHanh(MaTTBaoHanh, DiaChi,  DienThoai) values('BH09', N'HaNoi', 0876123998)
+INSERT INTO TrungTamBaoHanh(MaTTBaoHanh, DiaChi,  DienThoai) values('BH10', N'HaNoi', 0876123998)
+SELECT *FROM TrungTamBaoHanh
+
+INSERT INTO LoaiHang(MaLoaiHang, TenLoaiHang,MaNhaCC, MaTTBaoHanh) values('LH01',N'DELL','CC01','BH01')
+INSERT INTO LoaiHang(MaLoaiHang, TenLoaiHang,MaNhaCC, MaTTBaoHanh) values('LH02',N'ASUS','CC02','BH02')
+INSERT INTO LoaiHang(MaLoaiHang, TenLoaiHang,MaNhaCC, MaTTBaoHanh) values('LH03',N'MSI','CC03','BH03')
+INSERT INTO LoaiHang(MaLoaiHang, TenLoaiHang,MaNhaCC, MaTTBaoHanh) values('LH04',N'APPO','CC04','BH04')
+INSERT INTO LoaiHang(MaLoaiHang, TenLoaiHang,MaNhaCC, MaTTBaoHanh) values('LH05',N'MACBOOK','CC05','BH05')
+INSERT INTO LoaiHang(MaLoaiHang, TenLoaiHang,MaNhaCC, MaTTBaoHanh) values('LH06',N'ACER','CC06','BH06')
+INSERT INTO LoaiHang(MaLoaiHang, TenLoaiHang,MaNhaCC, MaTTBaoHanh) values('LH07',N'HP','CC07','BH07')
+INSERT INTO LoaiHang(MaLoaiHang, TenLoaiHang,MaNhaCC, MaTTBaoHanh) values('LH08',N'HUAWEI','CC08','BH08')
+INSERT INTO LoaiHang(MaLoaiHang, TenLoaiHang,MaNhaCC, MaTTBaoHanh) values('LH09',N'MASSTEL','CC09','BH09')
+INSERT INTO LoaiHang(MaLoaiHang, TenLoaiHang,MaNhaCC, MaTTBaoHanh) values('LH10',N'LENOVO','CC10','BH10')
+SELECT *FROM LoaiHang
+
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H01', N'Laptop Dell Inspiron', 'LH01', 1, 5000000,'Dell1.PNG',
+N'CPU	Intel Core i3-1005G1
+RAM	4 GB, DDR4, 2666 MHz
+Màn hình	15.6", 1920 x 1080 Pixel, WVA, 60 Hz, 220 nits
+Đồ họa	Intel UHD Graphics
+Ổ cứng	SSD 256 GB
+Hệ điều hành	Windows 10
+Trọng lượng (kg)	1.91
+Kích thước (mm)	363.96 x 249 x 18 ~ 19.90
+Xuất xứ	Trung Quốc
+Năm ra mắt	2020')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H02', N'Laptop Dell Inspiron', 'LH01', 2, 15000000,'Dell2.PNG',
+N'CPU	Intel Core i7-10510U
+RAM	8 GB, DDR4, 2666 MHz
+Màn hình	14.0", 1920 x 1080 Pixel, WVA, 60 Hz, 220 nits, Anti-glare LED-backlit
+Đồ họa	NVIDIA GeForce MX230 2 GB
+Ổ cứng	SSD 512 GB
+Hệ điều hành	Windows 10
+Trọng lượng (kg)	1.42
+Kích thước (mm)	328 x 215.6 x 17.5
+Xuất xứ	Trung Quốc
+Năm ra mắt	2020')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H03', N'Laptop Asus Zenbook', 'LH02', 6, 25000000,'Asus1.PNG',
+N'CPU	Intel Core i5-10210U
+RAM	8 GB, LPDDR3, 2133 MHz
+Màn hình	13.3", 1920 x 1080 Pixel, IPS, 60 Hz, 250 nits, Anti-glare LED-backlit
+Đồ họa	NVIDIA GeForce MX250 2 GB & Intel UHD Graphics
+Ổ cứng	SSD 512 GB
+Hệ điều hành	Windows 10
+Trọng lượng (kg)	1.22
+Kích thước (mm)	302 x 189 x 17.9
+Xuất xứ	Trung Quốc
+Năm ra mắt	2020')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H04', N'Laptop Asus Vivobook ', 'LH02', 3, 35000000,'Asus2.PNG',
+N'CPU	Intel Core i3-1005G1
+RAM	8 GB, DDR4, 2666 MHz
+Màn hình	15.6", 1920 x 1080 Pixels, TN, 60 Hz, 200 nits, Anti - Glare
+Đồ họa	Intel UHD Graphics 620
+Ổ cứng	SSD 512 GB
+Hệ điều hành	Windows 10
+Trọng lượng (kg)	1.90 kg
+Kích thước (mm)	360 x 235 x 22.9
+Xuất xứ	Trung Quốc
+Năm ra mắt	2020')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H05', N'Laptop MSI Bravo', 'LH03', 6, 25000000,'Msi1.PNG',
+N'CPU	AMD Ryzen 5-4600H
+RAM	8 GB, DDR4, 3200 MHz
+Màn hình	15.6", 1920 x 1080 Pixel, 144 Hz
+Đồ họa	AMD Radeon Graphics
+Ổ cứng	SSD 256 GB
+Hệ điều hành	Windows 10
+Trọng lượng (kg)	1.96
+Kích thước (mm)	359 x 254 x 21.7
+Xuất xứ	Trung Quốc
+Năm ra mắt	2020')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H06', N'Laptop MSI Prestige', 'LH03', 3, 35000000,'Msi2.PNG',
+N'CPU	Intel Core i5-1135G7
+RAM	8 GB, LPDDR4
+Màn hình	14.0", 1920 x 1080 Pixel, IPS, 60 Hz, 300 nits, IPS LCD LED Backlit, True Tone
+Đồ họa	Intel Iris Xe Graphics
+Ổ cứng	SSD 512 GB
+Hệ điều hành	Windows 10
+Trọng lượng (kg)	1.29
+Kích thước (mm)	319 x 219 x 15.9
+Xuất xứ	Trung Quốc
+Năm ra mắt	2020')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H07', N'MacBook Air 13', 'LH05', 6, 45000000,'Mac1.PNG',
+N'CPU	Intel Core i3-10th-gen
+RAM	8 GB, LPDDR4, 3733 MHz
+Màn hình	13.3", 2560 x 1600 Pixel, IPS, IPS LCD LED Backlit, True Tone
+Đồ họa	Intel Iris Plus Graphics
+Ổ cứng	SSD 256 GB
+Hệ điều hành	Mac OS
+Trọng lượng (kg)	1.29
+Kích thước (mm)	304.1 x 212.4 x 4.1 ~ 16.1
+Xuất xứ	Trung Quốc
+Năm ra mắt	2020')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H08', N'MacBook Pro 16', 'LH05', 8, 25000000,'Mac2.PNG',
+N'CPU	Intel Core i7-9th-gen
+RAM	16 GB, DDR4, 2666 MHz
+Màn hình	16.0", 3072 x 1920 Pixel, IPS, IPS LCD LED Backlit, True Tone
+Đồ họa	AMD Radeon Pro 5300M 4 GB & Intel UHD Graphics 630
+Ổ cứng	SSD 512 GB
+Hệ điều hành	Mac OS
+Trọng lượng (kg)	2.0
+Kích thước (mm)	357.9 x 24.59 x 16.2
+Xuất xứ	Trung Quốc
+Năm ra mắt	2019')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H09', N'Laptop Acer Aspire', 'LH06', 10, 35000000,'Acer1.PNG',
+N'CPU	AMD Ryzen 3-3250U
+RAM	4 GB, DDR4, 2400 MHz
+Màn hình	15.6", 1920 x 1080 Pixel, 60 Hz, LED-backlit
+Đồ họa	AMD Radeon Graphics
+Ổ cứng	SSD 256 GB
+Hệ điều hành	Windows 10
+Trọng lượng (kg)	1.7
+Xuất xứ	Trung Quốc
+Năm ra mắt	Đang cập nhật')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H10', N'Acer Aspire', 'LH06', 2, 15000000,'Acer2.PNG',
+N'CPU	Intel Celeron N4020
+RAM	4 GB, DDR4, 2666 MHz
+Màn hình	15.6", 1280 x 720 Pixel, Acer ComfyView LED-backlit
+Đồ họa	Intel UHD Graphics 600
+Ổ cứng	SSD 256 GB
+Hệ điều hành	Windows 10
+Trọng lượng (kg)	1.7
+Xuất xứ	Trung Quốc
+Năm ra mắt	Đang cập nhật')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H11', N'Laptop HP', 'LH07', 8, 35000000,'HP1.PNG',
+N'CPU	Intel Core i5-1135G7
+RAM	8 GB, DDR4, 2666 MHz
+Màn hình	15.6", 1366 x 768 Pixel, SVA, 60 Hz, 250 nits, Ultra Slim
+Đồ họa	Intel Iris Xe Graphics
+Ổ cứng	SSD 512 GB
+Hệ điều hành	Windows 10
+Trọng lượng (kg)	1.91
+Xuất xứ	Trung Quốc
+Năm ra mắt	2020')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H12', N'HP Pavilion', 'LH08', 12, 55000000,'HP2.PNG',
+N'CPU	Intel Core i3-8145U
+RAM	4 GB, DDR4, 2400 MHz
+Màn hình	14.0", 1920 x 1080 Pixel, 60 Hz, LED-backlit
+Đồ họa	Intel UHD Graphics 620
+Ổ cứng	HDD 500 GB
+Hệ điều hành	Windows 10
+Trọng lượng (kg)	1.53
+Xuất xứ	Trung Quốc
+Năm ra mắt	2018')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H13', N'Huawei MateBook', 'LH08', 12, 55000000,'Huawei1.PNG',
+N'CPU	Intel Core i5-10210U
+RAM	16 GB, LPDDR3, 2133 MHz
+Màn hình	13.0", 2160 x 1440 Pixel, IPS, 60 Hz, 300 nits
+Đồ họa	NVIDIA GeForce MX250 2 GB
+Ổ cứng	SSD 512 GB
+Hệ điều hành	Windows 10
+Trọng lượng (kg)	1.32
+Kích thước (mm)	280.5 x 211.5 x 14.9
+Xuất xứ	Trung Quốc
+Năm ra mắt	2020')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H14', N'Laptop Lenovo', 'LH10', 12, 55000000,'Lenovo1.PNG',
+N'CPU	Intel Core i5-1135G7
+RAM	8 GB, DDR4, 3200 MHz
+Màn hình	15.6", 1920 x 1080 Pixel, IPS, 300 nits, Anti-glare LED-backlit
+Đồ họa	Intel Iris Xe Graphics
+Ổ cứng	SSD 512 GB
+Hệ điều hành	Windows 10
+Trọng lượng (kg)	1.66
+Kích thước (mm)	356.67 x 233.13 x 17.9
+Xuất xứ	Trung Quốc
+Năm ra mắt	2020')
+INSERT INTO HangHoa(MaHang, TenHang, MaLoaiHang, SoLuongTon, GiaBan, AnhBia, MoTa) values('H15', N'Lenovo IdeaPad', 'LH10', 12, 55000000,'Lenovo2.PNG',
+N'CPU	Intel Core i3-8130U
+RAM	4 GB, DDR4, 2133 MHz
+Màn hình	15.6", 1920 x 1080 Pixel, TN, LED-backlit
+Đồ họa	Intel UHD Graphics 620
+Ổ cứng	SSD 256 GB
+Hệ điều hành	Windows 10
+Trọng lượng (kg)	1.85
+Kích thước (mm)	327.1 x 241 x 19.93
+Xuất xứ	Trung Quốc
+Năm ra mắt	2020')
+SELECT *FROM HangHoa
+
+
+INSERT INTO HoaDonBan(MaHDBan, MaKhachHang, NgayDat, NgayGiao, DaThanhToan, TinhTrang) values('HDB01', 'KH01', '12/09/2020', '16/09/2020', N'CHUA', N'CHUA GIAO')
+INSERT INTO HoaDonBan(MaHDBan, MaKhachHang, NgayDat, NgayGiao, DaThanhToan, TinhTrang) values('HDB02', 'KH02', '12/09/2020', '16/09/2020', N'DA THANH TOAN', N'DA GIAO')
+INSERT INTO HoaDonBan(MaHDBan, MaKhachHang, NgayDat, NgayGiao, DaThanhToan, TinhTrang) values('HDB03', 'KH03', '12/09/2020', '16/09/2020', N'CHUA', N'DA GIAO')
+INSERT INTO HoaDonBan(MaHDBan, MaKhachHang, NgayDat, NgayGiao, DaThanhToan, TinhTrang) values('HDB04', 'KH04', '12/09/2020', '16/09/2020', N'DA THANH TOAN', N'CHUA GIAO')
+INSERT INTO HoaDonBan(MaHDBan, MaKhachHang, NgayDat, NgayGiao, DaThanhToan, TinhTrang) values('HDB05', 'KH05', '12/09/2020', '16/09/2020', N'DA THANH TOAN', N'CHUA GIAO')
+INSERT INTO HoaDonBan(MaHDBan, MaKhachHang, NgayDat, NgayGiao, DaThanhToan, TinhTrang) values('HDB06', 'KH06', '12/09/2020', '16/09/2020', N'CHUA', N'CHUA GIAO')
+INSERT INTO HoaDonBan(MaHDBan, MaKhachHang, NgayDat, NgayGiao, DaThanhToan, TinhTrang) values('HDB07', 'KH07', '12/09/2020', '16/09/2020', N'CHUA', N'CHUA GIAO')
+INSERT INTO HoaDonBan(MaHDBan, MaKhachHang, NgayDat, NgayGiao, DaThanhToan, TinhTrang) values('HDB08', 'KH08', '12/09/2020', '16/09/2020', N'DA THANH TOAN', N'DA GIAO')
+INSERT INTO HoaDonBan(MaHDBan, MaKhachHang, NgayDat, NgayGiao, DaThanhToan, TinhTrang) values('HDB09', 'KH09', '12/09/2020', '16/09/2020', N'CHUA', N'CHUA GIAO')
+INSERT INTO HoaDonBan(MaHDBan, MaKhachHang, NgayDat, NgayGiao, DaThanhToan, TinhTrang) values('HDB10', 'KH10', '12/09/2020', '16/09/2020', N'CHUA', N'DA GIAO')
+SELECT *FROM HoaDonBan
+
+INSERT INTO ChiTietHDBan(MaHDBan, MaHang, SLBan, GiaBan, MaNhanVien) values('HDB01', 'H01', 3, 10000000, 'NV01')
+INSERT INTO ChiTietHDBan(MaHDBan, MaHang, SLBan, GiaBan, MaNhanVien) values('HDB02', 'H02', 2, 10000000, 'NV02')
+INSERT INTO ChiTietHDBan(MaHDBan, MaHang, SLBan, GiaBan, MaNhanVien) values('HDB03', 'H03', 6, 10000000, 'NV03')
+INSERT INTO ChiTietHDBan(MaHDBan, MaHang, SLBan, GiaBan, MaNhanVien) values('HDB04', 'H04', 9, 10000000, 'NV04')
+INSERT INTO ChiTietHDBan(MaHDBan, MaHang, SLBan, GiaBan, MaNhanVien) values('HDB05', 'H05', 1, 10000000, 'NV05')
+INSERT INTO ChiTietHDBan(MaHDBan, MaHang, SLBan, GiaBan, MaNhanVien) values('HDB06', 'H06', 4, 10000000, 'NV06')
+INSERT INTO ChiTietHDBan(MaHDBan, MaHang, SLBan, GiaBan, MaNhanVien) values('HDB07', 'H07', 6, 10000000, 'NV07')
+INSERT INTO ChiTietHDBan(MaHDBan, MaHang, SLBan, GiaBan, MaNhanVien) values('HDB08', 'H08', 2, 10000000, 'NV08')
+INSERT INTO ChiTietHDBan(MaHDBan, MaHang, SLBan, GiaBan, MaNhanVien) values('HDB09', 'H09', 1, 10000000, 'NV09')
+INSERT INTO ChiTietHDBan(MaHDBan, MaHang, SLBan, GiaBan, MaNhanVien) values('HDB10', 'H10', 1, 10000000, 'NV10')
+SELECT *FROM ChiTietHDBan

@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "ADD";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+<style>
+    .in:hover{
+        background-color:orange; 
+    }
+    .in {
+         border:none;   
+    }
+</style>
+<div class="container">
+    <h2 style="text-align: center">THÊM NHÂN VIÊN</h2>
+    <table class="table">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <tr>
+                <td style="text-align: center">MÃ NHÂN VIÊN</td>
+                <td>
+                    <input class="form-control" name="manv" />@ViewData["loi1"]</td>
+            </tr>
+            <tr>
+                <td style="text-align: center">TÊN NHÂN VIÊN</td>
+                <td>
+                    <input class="form-control" name="tennv" />@ViewData["loi2"]</td>
+            </tr>
+            <tr>
+                <td style="text-align: center">LƯƠNG</td>
+                <td>
+                    <input class="form-control" name="luong" />@ViewData["loi3"]</td>
+            </tr>
+            <tr>
+                <td style="text-align: center">GIỚI TÍNH</td>
+                <td>
+                    <select class="form-control" id="exampleFormControlSelect1" name="gioitinh">
+                        <option>Nam</option>
+                        <option>Nữ</option>
+                    </select>
+            </tr>
+            <tr>
+                <td style="text-align: center">CHỨC VỤ</td>
+                <td>
+                    <select class="form-control" id="exampleFormControlSelect1" name="chucvu">
+                        <option>Nhân Viên</option>
+                        <option>Quản lý</option>
+                        <option>Giám Đốc</option>
+                        <option>Thư Ký</option>
+                    </select>
+            </tr>
+            <tr>
+                <td style="text-align: center">ĐIỆN THOẠI</td>
+                <td>
+                    <input class="form-control" name="sdt" />@ViewData["loi5"]</td>
+            </tr>
+            <tr>
+                <td style="text-align: center">NGÀY SINH</td>
+                <td>
+                    <input class="form-control" type="date" name="ngaysinh" /></td>
+            </tr>
+            <tr style="height: 40px">
+                <td style="text-align: center">ĐỊA CHỈ</td>
+                <td>
+                    <input class="form-control" type="text" name="diachi" />@ViewData["loi4"]</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input class="btn btn-primary in" type="submit" value="THÊM NHÂN VIÊN" style="width: 150px;margin-left:45%"/>
+                </td>
+            </tr>
+             <tr>
+                <td colspan="2">
+                    <a href="@Url.Action("ShowNhanVien","NhanVien")" class="btn btn-primary">TRỞ VỀ</a>
+                </td>
+            </tr>
+             <tr>
+                <td colspan="2" style="text-align:center;color:#eb3b5a">
+                   <p>@ViewBag.TB</p> 
+                </td>
+             </tr>
+        }
+    </table>
+</div>

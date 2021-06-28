@@ -1,0 +1,129 @@
+﻿
+/*.logo img{
+    width:90px;
+    height:70px;
+    border-radius:5px;
+}
+.kind{
+    margin-right: 46px;
+    background-color:black;
+    border: none;
+}
+.kind:hover{
+    background-color: #f39c12;
+}
+.crs{
+    height: 270px;
+    border-radius: 5px;
+}
+.image{
+   height: 250px;
+   width: 250px;
+   margin-left:15%;
+   transition: 0.3s linear;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+.card{
+    border: 1px solid #ecf0f1;
+}
+.nav_icon{
+    font-size: 25px;
+    margin-top:7px;
+    color: black;
+    transition:  0.6s ease-out;
+}
+
+.nav_icon:hover{
+    transform: rotateZ(360deg);
+    color: #c0392b;
+}
+h5 a:hover{
+    text-decoration: none;
+}
+.row{
+    padding: 10px;
+}
+.row .col-4{
+    padding: 20px;
+}
+.row .col-4:hover{
+    border: 1px solid #a5b1c2;
+    border-radius: 10px;
+    
+}
+.row .col-4 .btn{
+    background-color: white;
+    border: none;
+}
+.row .col-4:hover .btn{
+    background-color:#1e90ff ;
+}
+.row .col-4:hover .image{
+    transform: scale(1.1);
+}*/
+.icon{
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+.icon .sub_icon{
+    list-style: none;
+    margin: 0 5px;
+}
+.icon .sub_icon a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    transition: 0.5s;
+}
+i {
+    z-index:2;
+}
+.icon .sub_icon a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    border-radius: 50%;
+    z-index: 1;
+    transform: scale(0);
+    transition: 0.5s cubic-bezier(.95,.32,.37,1.31);
+} 
+.icon .sub_icon a:hover::before{
+    transform: scale(1);
+}
+.icon .sub_icon a:hover{
+    color: white;
+}
+.icon .sub_icon:nth-child(1) a:hover::before{
+     background:#d63031;
+}
+.icon .sub_icon:nth-child(2) a:hover::before{
+    background:#C13584;
+}
+.icon .sub_icon:nth-child(3) a:hover::before{
+    background:#74b9ff;
+}
+.icon .sub_icon:nth-child(4) a:hover::before{
+    background:#d63031;
+}
+.icon .sub_icon:nth-child(5) a:hover::before{
+    background:#2980b9;
+}
+.icon .sub_icon:nth-child(6) a:hover::before{
+    background:#2980b9;
+}
+.div {
+    margin-left: 40%;
+}

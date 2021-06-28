@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aed8ee2d71af42f9be1b02b92c62fbb6" Name="Diagram1">
+        <EntityTypeShape EntityType="QLLAPTOPModel.ADMIN" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLAPTOPModel.ChiTietHDBan" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLAPTOPModel.HangHoa" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLAPTOPModel.HoaDonBan" Width="1.5" PointX="10" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLAPTOPModel.KhachHang" Width="1.5" PointX="7.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLAPTOPModel.LoaiHang" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLAPTOPModel.NhaCungCap" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLAPTOPModel.NhanVien" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLLAPTOPModel.TrungTamBaoHanh" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <AssociationConnector Association="QLLAPTOPModel.FK_CTHDB_HH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLAPTOPModel.FK_CTHDB_NV" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLAPTOPModel.FK_HH_LH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLAPTOPModel.FK_HDB_KH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLAPTOPModel.FK_LH_NCC" ManuallyRouted="false" />
+        <AssociationConnector Association="QLLAPTOPModel.FK_LH_TTBH" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

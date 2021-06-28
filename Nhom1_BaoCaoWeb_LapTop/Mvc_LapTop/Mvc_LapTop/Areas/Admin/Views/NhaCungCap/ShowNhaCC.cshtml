@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Mvc_LapTop.Models.NhaCungCap>
+
+@{
+    ViewBag.Title = "ShowNhaCC";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>TẤT CẢ NHÀ CUNG CẤP</h2>
+@using (Html.BeginForm("SeachSP", "NhaCungCap", FormMethod.Get))
+{
+    <p>
+      @Html.TextBox("seachstring") <input type="submit" value="Tìm kiếm" style="border:none;background-color:#f39c12;height:30px;color:white;border-radius:5px" />
+    </p>
+}
+<a href="@Url.Action("ADD", "NhaCungCap")" class="btn btn-primary"  style="margin-bottom:20px">ADD NHÀ CUNG CẤP</a>
+<table class="table table-bordered text-center">
+    <tr style="background-color: #a55eea; color: white">
+        <th>MÃ NHÀ CUNG CẤP
+        </th>
+        <th>TÊN NHÀ CUNG CẤP
+        </th>
+        <th>ĐỊA CHỈ
+        </th>
+        <th>ĐIỆN THOẠI
+        </th>
+        <th>CHỨC NĂNG</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaNhaCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNhaCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaChi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DienThoai)
+            </td>
+            <td>
+                <a href="@Url.Action("REMOVE", "NhaCungCap", new { @mancc = item.MaNhaCC })" class="btn btn-primary">REMOVE</a>
+                <a href="@Url.Action("DETAILS", "NhaCungCap", new { @mancc= item.MaNhaCC})" class="btn btn-danger">DETAILS</a>
+                <a href="@Url.Action("EDIT", "NhaCungCap", new { @mancc= item.MaNhaCC})" class="btn btn-warning">UPDATE</a>
+            </td>
+        </tr>
+    }
+
+</table>

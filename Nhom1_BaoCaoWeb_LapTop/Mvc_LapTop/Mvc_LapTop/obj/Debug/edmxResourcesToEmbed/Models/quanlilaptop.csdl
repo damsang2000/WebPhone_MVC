@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLLAPTOPModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QLLAPTOPEntities2" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="ADMINs" EntityType="QLLAPTOPModel.ADMIN" />
+    <EntitySet Name="ChiTietHDBans" EntityType="QLLAPTOPModel.ChiTietHDBan" />
+    <EntitySet Name="HangHoas" EntityType="QLLAPTOPModel.HangHoa" />
+    <EntitySet Name="HoaDonBans" EntityType="QLLAPTOPModel.HoaDonBan" />
+    <EntitySet Name="KhachHangs" EntityType="QLLAPTOPModel.KhachHang" />
+    <EntitySet Name="LoaiHangs" EntityType="QLLAPTOPModel.LoaiHang" />
+    <EntitySet Name="NhaCungCaps" EntityType="QLLAPTOPModel.NhaCungCap" />
+    <EntitySet Name="NhanViens" EntityType="QLLAPTOPModel.NhanVien" />
+    <EntitySet Name="TrungTamBaoHanhs" EntityType="QLLAPTOPModel.TrungTamBaoHanh" />
+    <AssociationSet Name="FK_CTHDB_HH" Association="QLLAPTOPModel.FK_CTHDB_HH">
+      <End Role="HangHoa" EntitySet="HangHoas" />
+      <End Role="ChiTietHDBan" EntitySet="ChiTietHDBans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHDB_NV" Association="QLLAPTOPModel.FK_CTHDB_NV">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="ChiTietHDBan" EntitySet="ChiTietHDBans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HH_LH" Association="QLLAPTOPModel.FK_HH_LH">
+      <End Role="LoaiHang" EntitySet="LoaiHangs" />
+      <End Role="HangHoa" EntitySet="HangHoas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HDB_KH" Association="QLLAPTOPModel.FK_HDB_KH">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="HoaDonBan" EntitySet="HoaDonBans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LH_NCC" Association="QLLAPTOPModel.FK_LH_NCC">
+      <End Role="NhaCungCap" EntitySet="NhaCungCaps" />
+      <End Role="LoaiHang" EntitySet="LoaiHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LH_TTBH" Association="QLLAPTOPModel.FK_LH_TTBH">
+      <End Role="TrungTamBaoHanh" EntitySet="TrungTamBaoHanhs" />
+      <End Role="LoaiHang" EntitySet="LoaiHangs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="true" />
+    <Property Name="password" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="ChiTietHDBan">
+    <Key>
+      <PropertyRef Name="MaHang" />
+      <PropertyRef Name="MaHDBan" />
+    </Key>
+    <Property Name="MaHDBan" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="MaHang" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="SLBan" Type="Int32" />
+    <Property Name="GiaBan" Type="Int32" />
+    <Property Name="MaNhanVien" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="HangHoa" Relationship="QLLAPTOPModel.FK_CTHDB_HH" FromRole="ChiTietHDBan" ToRole="HangHoa" />
+    <NavigationProperty Name="NhanVien" Relationship="QLLAPTOPModel.FK_CTHDB_NV" FromRole="ChiTietHDBan" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="HangHoa">
+    <Key>
+      <PropertyRef Name="MaHang" />
+    </Key>
+    <Property Name="MaHang" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="TenHang" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MaLoaiHang" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="SoLuongTon" Type="Int32" />
+    <Property Name="GiaBan" Type="Int32" />
+    <Property Name="AnhBia" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="MoTa" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="ChiTietHDBans" Relationship="QLLAPTOPModel.FK_CTHDB_HH" FromRole="HangHoa" ToRole="ChiTietHDBan" />
+    <NavigationProperty Name="LoaiHang" Relationship="QLLAPTOPModel.FK_HH_LH" FromRole="HangHoa" ToRole="LoaiHang" />
+  </EntityType>
+  <EntityType Name="HoaDonBan">
+    <Key>
+      <PropertyRef Name="MaHDBan" />
+    </Key>
+    <Property Name="MaHDBan" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="MaKhachHang" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="NgayDat" Type="DateTime" Precision="0" />
+    <Property Name="NgayGiao" Type="DateTime" Precision="0" />
+    <Property Name="DaThanhToan" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="TinhTrang" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="KhachHang" Relationship="QLLAPTOPModel.FK_HDB_KH" FromRole="HoaDonBan" ToRole="KhachHang" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="MaKhachHang" />
+    </Key>
+    <Property Name="MaKhachHang" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="TenKhachHang" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="GioiTinh" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="SDT" Type="Int32" />
+    <Property Name="TaiKhoan" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="HoaDonBans" Relationship="QLLAPTOPModel.FK_HDB_KH" FromRole="KhachHang" ToRole="HoaDonBan" />
+  </EntityType>
+  <EntityType Name="LoaiHang">
+    <Key>
+      <PropertyRef Name="MaLoaiHang" />
+    </Key>
+    <Property Name="MaLoaiHang" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="TenLoaiHang" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MaNhaCC" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="MaTTBaoHanh" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="HangHoas" Relationship="QLLAPTOPModel.FK_HH_LH" FromRole="LoaiHang" ToRole="HangHoa" />
+    <NavigationProperty Name="NhaCungCap" Relationship="QLLAPTOPModel.FK_LH_NCC" FromRole="LoaiHang" ToRole="NhaCungCap" />
+    <NavigationProperty Name="TrungTamBaoHanh" Relationship="QLLAPTOPModel.FK_LH_TTBH" FromRole="LoaiHang" ToRole="TrungTamBaoHanh" />
+  </EntityType>
+  <EntityType Name="NhaCungCap">
+    <Key>
+      <PropertyRef Name="MaNhaCC" />
+    </Key>
+    <Property Name="MaNhaCC" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="TenNhaCC" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="DienThoai" Type="Int32" />
+    <NavigationProperty Name="LoaiHangs" Relationship="QLLAPTOPModel.FK_LH_NCC" FromRole="NhaCungCap" ToRole="LoaiHang" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="MaNhanVien" />
+    </Key>
+    <Property Name="MaNhanVien" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="TenNhanVien" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="GioiTinh" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="Luong" Type="Int32" />
+    <Property Name="ChucVu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SDT" Type="Int32" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="ChiTietHDBans" Relationship="QLLAPTOPModel.FK_CTHDB_NV" FromRole="NhanVien" ToRole="ChiTietHDBan" />
+  </EntityType>
+  <EntityType Name="TrungTamBaoHanh">
+    <Key>
+      <PropertyRef Name="MaTTBaoHanh" />
+    </Key>
+    <Property Name="MaTTBaoHanh" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DienThoai" Type="Int32" />
+    <NavigationProperty Name="LoaiHangs" Relationship="QLLAPTOPModel.FK_LH_TTBH" FromRole="TrungTamBaoHanh" ToRole="LoaiHang" />
+  </EntityType>
+  <Association Name="FK_CTHDB_HH">
+    <End Role="HangHoa" Type="QLLAPTOPModel.HangHoa" Multiplicity="1" />
+    <End Role="ChiTietHDBan" Type="QLLAPTOPModel.ChiTietHDBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HangHoa">
+        <PropertyRef Name="MaHang" />
+      </Principal>
+      <Dependent Role="ChiTietHDBan">
+        <PropertyRef Name="MaHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTHDB_NV">
+    <End Role="NhanVien" Type="QLLAPTOPModel.NhanVien" Multiplicity="1" />
+    <End Role="ChiTietHDBan" Type="QLLAPTOPModel.ChiTietHDBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="MaNhanVien" />
+      </Principal>
+      <Dependent Role="ChiTietHDBan">
+        <PropertyRef Name="MaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HH_LH">
+    <End Role="LoaiHang" Type="QLLAPTOPModel.LoaiHang" Multiplicity="1" />
+    <End Role="HangHoa" Type="QLLAPTOPModel.HangHoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiHang">
+        <PropertyRef Name="MaLoaiHang" />
+      </Principal>
+      <Dependent Role="HangHoa">
+        <PropertyRef Name="MaLoaiHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HDB_KH">
+    <End Role="KhachHang" Type="QLLAPTOPModel.KhachHang" Multiplicity="1" />
+    <End Role="HoaDonBan" Type="QLLAPTOPModel.HoaDonBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="MaKhachHang" />
+      </Principal>
+      <Dependent Role="HoaDonBan">
+        <PropertyRef Name="MaKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LH_NCC">
+    <End Role="NhaCungCap" Type="QLLAPTOPModel.NhaCungCap" Multiplicity="1" />
+    <End Role="LoaiHang" Type="QLLAPTOPModel.LoaiHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhaCungCap">
+        <PropertyRef Name="MaNhaCC" />
+      </Principal>
+      <Dependent Role="LoaiHang">
+        <PropertyRef Name="MaNhaCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LH_TTBH">
+    <End Role="TrungTamBaoHanh" Type="QLLAPTOPModel.TrungTamBaoHanh" Multiplicity="1" />
+    <End Role="LoaiHang" Type="QLLAPTOPModel.LoaiHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TrungTamBaoHanh">
+        <PropertyRef Name="MaTTBaoHanh" />
+      </Principal>
+      <Dependent Role="LoaiHang">
+        <PropertyRef Name="MaTTBaoHanh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

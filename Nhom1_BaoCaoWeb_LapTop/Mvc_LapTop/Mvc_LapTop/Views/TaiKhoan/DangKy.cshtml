@@ -1,0 +1,55 @@
+﻿<div class="contai" style="font: 20px; margin-top: 200px; box-shadow: 0px 0px 10px #78e08f; border: 5px solid lightblue; margin-top: 100px; margin-left: 500px; width: 350px; height: 510px">
+    <h1 style="color: blueviolet; margin-left: 80px">ĐĂNG KÝ</h1>
+    <table class="table" style="margin-left: 20px; background-color: azure">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+            <tr style="height: 40px">
+                <td style="text-align: right">Họ tên khách hàng:</td>
+                <td>@Html.TextBox("HoTenKH", "", new { @class = "form-control" })@ViewData["loi1"]</td>
+            </tr>
+            <tr style="height: 40px">
+                <td style="text-align: right">Tên đăng nhập:</td>
+                <td>@Html.TextBox("TenDN", "", new { @class = "form-control" })@ViewData["loi2"]</td>
+            </tr>
+            <tr style="height: 40px">
+                <td style="text-align: right">Mật khẩu:</td>
+                <td>@Html.TextBox("MatKhau", "", new { @class = "form-control" })@ViewData["loi3"]</td>
+            </tr>
+            <tr style="height: 40px">
+                <td style="text-align: right">Nhập lại mật khẩu:</td>
+                <td>@Html.TextBox("ReMatKhau", "", new { @class = "form-control" })@ViewData["loi4"]</td>
+            </tr>
+            <tr style="height: 40px">
+                <td style="text-align: right">Điện thoại:</td>
+                <td>@Html.TextBox("DienThoai", "", new { @class = "form-control" })@ViewData["loi5"]</td>
+            </tr>
+            <tr style="height: 40px">
+                <td style="text-align: right">Ngày sinh:</td>
+                <td>
+                    <input type="date" name="NgaySinh" class="form-control" /></td>
+            </tr>
+            <tr style="height: 40px">
+                <td style="text-align: right">Email:</td>
+                <td>
+                    <input type="text" name="Email" class="form-control" /></td>
+            </tr>
+            <tr style="height: 40px">
+                <td style="text-align: right">Địa chỉ:</td>
+                <td>
+                    <input type="text" name="DiaChi" class="form-control" /></td>
+            </tr>  
+            <tr style="height: 40px">
+                <td></td>
+                <td colspan="2">
+                    <input class="btn btn-primary" type="submit" value="Đăng ký" /></td>
+            </tr>  
+            <tr style="height: 40px;">
+                <td colspan="2">
+                Bạn đã có tài khoản, vui lòng! 
+                @Html.ActionLink("Đăng Nhập", "DangNhap", "TaiKhoan")
+            </tr>        
+        }
+    </table>
+</div>
+
